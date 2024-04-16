@@ -1,0 +1,30 @@
+Descripción:
+El código implementa un juego de memoria en Python. El juego sigue los siguientes pasos:
+
+1. Solicita al usuario que ingrese el tamaño de la cuadrícula para la matriz de juego.
+2. Genera una matriz de tamaño `n x n` con caracteres alfanuméricos y símbolos.
+3. Muestra la matriz al usuario por un tiempo limitado para que la memorice.
+4. Oculta uno de los caracteres aleatorios en la matriz.
+5. Pide al usuario que adivine el valor oculto.
+6. Revela el valor oculto y dice si la respuesta del usuario fue correcta o incorrecta.
+7. Pregunta al usuario si desea volver a jugar y continúa jugando según su eleccion
+
+Entradas:
+Tamaño de la cuadrícula.
+Respuesta del usuario
+
+Salidas:
+La matriz 
+Mensajes indicando si la respuesta del usuario fue correcta o incorrecta.
+Una pregunta al usuario si desea volver a jugar.
+
+Proceso del código:
+1. Se importan los módulos necesarios.
+2. Se definen varias funciones para generar la matriz, mostrarla, ocultar y revelar valores, calcular el límite de tiempo y controlar el flujo del juego.
+3. Se inicia el juego con un mensaje de bienvenida.
+4. Se ejecuta el juego en un bucle mientras el usuario decida seguir jugando.
+5. Durante cada juego, se generan y muestran la matriz, se espera un tiempo limitado para que el usuario la memorice, se oculta un valor aleatorio, se pide al usuario que adivine el valor oculto, se revela el valor oculto y se proporciona retroalimentación.
+6. Después de cada juego, se pregunta al usuario si desea volver a jugar.
+
+Restricciones:
+El tamaño de la cuadrícula debe ser un número entero positivo.

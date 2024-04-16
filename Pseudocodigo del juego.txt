@@ -1,0 +1,54 @@
+Program_prueba_memoria
+// Programa en el cual el usuario puede probar su memoria recordando un valor en una matriz
+Start
+Función generarate_random_matrix(n):
+    options = list (de caracteres alfanuméricos y símbolos)
+    random.shuffle(options)
+       return [[random.choice(options) for _ in range(n)] for _ in range(n)]
+
+Función show_matrix(matrix):
+    print("\n".join(" ".join(row) for row in matrix))
+
+Función hide_value(matrix, value):
+     for row in matrix:
+        if value in row:
+            row[row.index(value)] = " "
+            break
+
+Función reveal_value(matrix, value):
+    for row in matrix:
+        if "*" in row:
+            row[row.index(" ")] = value
+
+Función limit_time(n):
+    return max(3, 3 + 0.5 * (n - 3))
+
+Disply "Bienvenido a Prueba tu memoria"
+
+Función play_game():
+    n = int(input("Ingrese el tamaño de la cuadricula :"))
+    matrix = generate_random_matrix(n)
+    print("Memoriza los valores")
+
+    show_matrix(matrix)
+    t= limit_time(n)
+    time.sleep(t)
+    clear_output(wait=True)
+    valor_oculto = random.choice(matrix[0])
+    hide_value(matrix, valor_oculto)
+
+    print("Encuentra el valor oculto")
+    show_matrix(matrix)
+    adivina_valor = input("ingrese el valor que falta :")
+    reveal_valor(matrix, valor_oculto)
+    print("¡Correcto! Has encontrado el valor oculto." if adivina_valor ==   valor_oculto else f"Incorrecto. El valor era {valor_oculto}.")
+
+    def main():
+    while True:
+        play_game()
+        if input("¿quieres volver a jugar? (s/n): ").lower() != "s":
+            break
+
+if __name__ == "__main__":
+    main()
+Stop
